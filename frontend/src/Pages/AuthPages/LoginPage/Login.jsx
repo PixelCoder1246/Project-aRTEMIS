@@ -4,7 +4,7 @@ import './Login.css';
 import ImgLogin from '../../../assets/LoginImage.png';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { z } from 'zod';
-import { useAuth } from "../../../useAuth";
+import { useAuth } from "../../../hooks/useAuth";
 
 
 const loginSchema = z.object({

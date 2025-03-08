@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import "./App.css";
-import { useAuth } from "./useAuth";
+import { useAuth } from "./hooks/useAuth";
 
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import Layout from "./Pages/LandingPages/LayoutArea/Layout";

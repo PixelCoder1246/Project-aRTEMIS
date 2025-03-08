@@ -6,7 +6,7 @@ import Img2 from '../../../assets/AI-img/AIbusiness.png';
 import Img3 from '../../../assets/AI-img/AIdev.png';
 import Img4 from '../../../assets/AI-img/AIcreative.png';
 import { FaRobot, FaRegLightbulb, FaUsers, FaBriefcase } from 'react-icons/fa';
-import { useAuth } from "../../../useAuth"
+import { useAuth } from "../../../hooks/useAuth"
 
 const AICards = forwardRef((props, ref) => {
   const { user, isAuthenticated, setUser, setIsAuthenticated } = useAuth();

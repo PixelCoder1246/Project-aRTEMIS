@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import "./Navbar.css";
 import Logo from "../../assets/Logo/ArtenisLogo.png";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../useAuth";
+import { useAuth } from "../../hooks/useAuth";
 import LogoutButton from "../LogoutButton/LogoutButton";
 
 function Navbar({ toggleTheme, isDarkTheme }) {

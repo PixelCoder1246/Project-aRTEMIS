@@ -3,7 +3,7 @@ import AICards from "../../../Components/LandingPageComponents/AICards/AICards";
 import LandingCards from "../../../Components/LandingPageComponents/LandingCards/LandingCards";
 import LandingComponent from "../../../Components/LandingPageComponents/LandingComponent/LandingComponent";
 import { motion } from "framer-motion";
-import { useAuth } from "../../../useAuth";
+import { useAuth } from "../../../hooks/useAuth";
 
 function HomePage() {
   const aiCardsRef = useRef(null);

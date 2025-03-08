@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { AuthContext } from "../../authContext";
+import { AuthContext } from "../../hooks/authContext";
 import { motion } from "framer-motion";
 import "./LogoutButton.css"
 
