@@ -1,0 +1,12 @@
+.layout-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--background);
+    transition: background 0.3s ease;
+  }
+  
+  .main-content {
+    flex: 1 0 auto;
+    margin-top: 85px;
+  }
