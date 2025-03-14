@@ -7,7 +7,13 @@ router.get('/status', authMiddleware, (req, res)=> {
 });
 
 router.post('/logout', (req, res)=> {
-    res.clearCookie("token", { path: "/", httpOnly: true, secure: false });
+    res.clearCookie("token", {
+        path: "/",
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "None"
+    });
+    
     res.json({ loggedIn: false });
 });
 
