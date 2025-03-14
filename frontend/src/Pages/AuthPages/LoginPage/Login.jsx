@@ -7,13 +7,10 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { z } from 'zod';
 import { useAuth } from "../../../hooks/useAuth";
 
-<<<<<<< HEAD
 const TURNSTILE_SITE_KEY = "0x4AAAAAABAJs8UnxeYb_Dfh";
-=======
 const API_URL = import.meta.env.VITE_API_URL;
 
 
->>>>>>> e0d0e2adbb1d4dd5d46a61fab848e643c8848289
 
 const loginSchema = z.object({
     email: z.string().email('Invalid email'),
@@ -59,37 +56,9 @@ function Login() {
             return;
         }
 
-<<<<<<< HEAD
         if (!turnstileToken) {
             setErrorMessage("Please complete the security verification.");
             return;
-=======
-        const data = await fetch(`https://project-artemis-production.up.railway.app/login`, {
-            method : 'POST',
-            headers : {
-                "Content-type" : "application/json"
-            },
-            credentials : 'include',
-            body : JSON.stringify(formData),
-        })
-
-        const response = await data.json();
-
-        setAPIresponse(response.message);
-
-        if(response.success) {
-            setSuccessAPI(true);
-            
-            navigateRef.current = setTimeout(async()=> {
-                await checkAuthStatus();
-                setIsAuthenticated(true);
-                setUser(data.user);
-                navigate('/');
-            },2000)
-        } else {
-            setErrorMessage("Wrong Credentials!");
-            
->>>>>>> e0d0e2adbb1d4dd5d46a61fab848e643c8848289
         }
 
         try {

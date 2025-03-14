@@ -112,7 +112,6 @@ function Register() {
       return;
     }
 
-<<<<<<< HEAD
     try {
       const data = await fetch(`https://project-artemis-production.up.railway.app/signup`, {
         method: "POST",
@@ -121,15 +120,6 @@ function Register() {
         },
         body: JSON.stringify(result.data),
       });
-=======
-    const data = await fetch(`https://project-artemis-production.up.railway.app/signup`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(result.data),
-    });
->>>>>>> e0d0e2adbb1d4dd5d46a61fab848e643c8848289
 
       const response = await data.json();
 
