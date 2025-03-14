@@ -1,0 +1,136 @@
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  /* Light Theme ig */
+  --background: #E6E9F0;
+  --navbar-bg: #1A459D;
+  --buttons-bg: #2E3447;
+  --cards-bg: #1A459D;
+  --navbar-buttons-bg: #050A30;
+  --Headings-Cards: white;
+  --Para-Cards: white;
+  --Normal-Text: Black;
+  --Heading-Text: Black;
+  --card-text: white;
+  --scrollbar-bg: #d8d8d8; 
+  --scrollbar-thumb: #4A7BD1; 
+  --scrollbar-thumb-hover: #2E3447;
+  --scrollbar-width: 12px;
+  --form: white;
+  --form-text: black;
+  --user-settings : rgb(0, 199, 0);
+
+  
+  p{
+    color: rgb(0, 0, 0);
+  }
+
+  h1{
+    color: rgb(0, 0, 0);
+  }
+
+  span{
+    color: rgb(0, 0, 0);
+  }
+
+  h2{
+    color: rgb(0, 0, 0);
+  }
+}
+
+:root.dark {
+  /* Dark Theme ig */
+  
+  --form-text: white;
+  --form: #4A7BD1;
+  --background: #252A3A;
+  --buttons-bg: #355A9E;
+  --cards-bg: #4A7BD1;
+  --Normal-Text: White;
+  --Heading-Text: White;
+  --scrollbar-bg: #3a3a3a; 
+  --scrollbar-thumb: #1A459D; 
+  --scrollbar-thumb-hover: #2E3447; 
+  --user-settings : rgb(94, 255, 94);
+
+
+  p{
+    color: white;
+  }
+
+  h1{
+    color: white;
+  }
+
+  span{
+    color: white;
+  }
+
+  h2{
+    color: white;
+  }
+}
+
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+  height: var(--scrollbar-width); 
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg); 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb); 
+  border-radius: 10px;
+  border: 3px solid var(--background); 
+  transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
+}
+
+::-webkit-scrollbar-button {
+  display: none; 
+}
+
+scrollbar {
+  width: var(--scrollbar-width);
+}
+
+scrollbar-track {
+  background: var(--scrollbar-bg);
+  border-radius: 10px;
+}
+
+scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 10px;
+  border: 3px solid var(--background);
+}
+
+scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
+}
+
+::selection {
+  background-color: rgb(174, 186, 255);
+  color: rgb(0, 0, 0);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}

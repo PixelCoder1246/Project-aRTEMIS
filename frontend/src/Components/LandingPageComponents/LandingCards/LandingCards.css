@@ -1,0 +1,150 @@
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center;
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 10px; 
+}
+
+.card {
+    background-color: var(--cards-bg);
+    padding: 15px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    max-width: 300px; 
+    opacity: 0;
+    animation: popIn 1s forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card:nth-child(odd) {
+    animation-name: popInLeft;
+}
+
+.card:nth-child(even) {
+    animation-name: popInRight;
+}
+
+@keyframes popInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes popInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    filter: brightness(1.1);
+    opacity: 1;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card-icon {
+    font-size: 1.5rem; 
+    margin-right: 8px;
+    color: var(--card-text);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.card h3 {
+    font-size: 1.2rem; 
+    color: var(--card-text);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.card p {
+    font-size: 0.9rem; 
+    color: var(--card-text);
+    line-height: 1.4;
+    margin-top: 8px; 
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover .card-icon {
+    color: #FFD700;
+    transform: rotate(10deg);
+}
+
+.card:hover h3 {
+    transform: translateY(-5px);
+    color: #FFD700;
+}
+
+.card:hover p {
+    opacity: 1;
+    transform: translateY(5px);
+}
+
+@media (max-width: 850px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 600px) {
+    .cards-container {
+        grid-template-columns: 1fr; 
+        padding: 5px; 
+    }
+    .card {
+        max-width: 250px; 
+        padding: 10px; 
+    }
+    .card h3 {
+        font-size: 1rem; 
+    }
+    .card p {
+        font-size: 0.8rem; 
+    }
+    .card-icon {
+        font-size: 1.2rem;
+    }
+}
