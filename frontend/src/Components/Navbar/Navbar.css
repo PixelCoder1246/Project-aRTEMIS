@@ -226,7 +226,7 @@
   }
   
   #logout-btn {
-    color: rgb(36, 0, 217);
+    color: rgb(217, 0, 0);
     transition: all 0.3s ease;
   }
   #logout-btn:hover {
