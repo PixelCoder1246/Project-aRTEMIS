@@ -1,0 +1,36 @@
+
+.dashboard-content .user-dashboard {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.Headinger-dashboard{
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--form-text);
+}
+
+.user-dashboard .top-user-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 0; 
+}
+
+@media screen and (max-width: 768px) {
+    .user-dashboard .top-user-area {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .user-dashboard .top-user-area {
+        grid-template-columns: 1fr; 
+    }
+    .user-dashboard {
+        padding: 10px; 
+    }
+}

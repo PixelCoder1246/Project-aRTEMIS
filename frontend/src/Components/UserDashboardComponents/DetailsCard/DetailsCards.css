@@ -1,0 +1,411 @@
+
+.Dashboard-Shortcut-Card-Container {
+    background: var(--cards-bg);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 5px;
+    padding: 20px;
+    width: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.Dashboard-Shortcut-Card-Header h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--Headings-Cards);
+    font-weight: bold;
+}
+
+.Dashboard-Shortcut-Card-Body {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.Dashboard-Shortcut-Card-Section {
+    flex: 1;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+.Dashboard-Shortcut-Card-Section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--Headings-Cards);
+}
+
+.Dashboard-Shortcut-Card-Section p {
+    color: var(--Para-Cards);
+}
+
+.Dashboard-Shortcut-Fullscreen-Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.Dashboard-Shortcut-Fullscreen-Container {
+    background: var(--cards-bg);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
+    overflow-y: auto;
+    max-height: 90vh;
+    h2{
+    color: white!important;
+    }
+}
+
+.Dashboard-Shortcut-Team-Modal-Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.Dashboard-Shortcut-Team-Modal-Container {
+    background: var(--cards-bg);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 900px;
+    position: relative;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+.Dashboard-Shortcut-Details-Modal-Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.Dashboard-Shortcut-Details-Modal-Container {
+    background: var(--cards-bg);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+.Dashboard-Shortcut-Details-Content {
+    margin: 20px 0;
+}
+
+.Dashboard-Shortcut-Details-Content p {
+    margin: 10px 0;
+    color: var(--Para-Cards);
+}
+
+.Dashboard-Shortcut-Details-Content strong {
+    color: var(--Headings-Cards);
+}
+
+.Dashboard-Shortcut-Close-Btn,
+.Dashboard-Shortcut-Team-Close-Btn,
+.Dashboard-Shortcut-Details-Close-Btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    color: var(--card-text);
+}
+
+.Dashboard-Shortcut-Close-Btn:hover,
+.Dashboard-Shortcut-Team-Close-Btn:hover,
+.Dashboard-Shortcut-Details-Close-Btn:hover {
+    transform: scale(1.1);
+    color: #f44336;
+}
+
+.Dashboard-Shortcut-Table,
+.Dashboard-Shortcut-Team-Table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: var(--card-text);
+}
+
+.Dashboard-Shortcut-Table th,
+.Dashboard-Shortcut-Table td,
+.Dashboard-Shortcut-Team-Table th,
+.Dashboard-Shortcut-Team-Table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.Dashboard-Shortcut-Table th,
+.Dashboard-Shortcut-Team-Table th {
+    background-color: var(--navbar-buttons-bg);
+    font-weight: bold;
+    color: var(--Headings-Cards);
+}
+
+/* Button Styles */
+.Dashboard-Shortcut-Card-Footer button,
+.Dashboard-Shortcut-Table button,
+.Dashboard-Shortcut-Team-Table button,
+.Dashboard-Shortcut-Live-Button,
+.Dashboard-Shortcut-View-Button {
+    color: var(--card-text);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    background: var(--navbar-buttons-bg);
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease;
+    z-index: 1;
+    border: none;
+    cursor: pointer;
+}
+
+.Dashboard-Shortcut-Card-Footer button:hover,
+.Dashboard-Shortcut-Table button:hover,
+.Dashboard-Shortcut-Team-Table button:hover,
+.Dashboard-Shortcut-Live-Button:hover,
+.Dashboard-Shortcut-View-Button:hover {
+    transform: scale(1.1) translateY(-3px);
+    background: var(--buttons-bg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+}
+
+.Dashboard-Shortcut-Card-Footer button::after,
+.Dashboard-Shortcut-Table button::after,
+.Dashboard-Shortcut-Team-Table button::after,
+.Dashboard-Shortcut-Live-Button::after,
+.Dashboard-Shortcut-View-Button::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.Dashboard-Shortcut-Card-Footer button:hover::after,
+.Dashboard-Shortcut-Table button:hover::after,
+.Dashboard-Shortcut-Team-Table button:hover::after,
+.Dashboard-Shortcut-Live-Button:hover::after,
+.Dashboard-Shortcut-View-Button:hover::after {
+    width: 70%;
+}
+
+.Dashboard-Shortcut-Card-Footer button:hover::before,
+.Dashboard-Shortcut-Table button:hover::before,
+.Dashboard-Shortcut-Team-Table button:hover::before,
+.Dashboard-Shortcut-Live-Button:hover::before,
+.Dashboard-Shortcut-View-Button:hover::before {
+    content: '';
+    position: absolute;
+        text-align: center;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    animation: glow 1.5s infinite alternate;
+}
+
+.Dashboard-Shortcut-Tag {
+    background-color: var(--navbar-buttons-bg);
+    padding: 5px 10px;
+    margin: 2px 8px 2px 0;
+    border-radius: 20px;
+    font-size: 14px;
+    display: inline-block;
+    color: white !important;
+}
+
+.Dashboard-Shortcut-Closed-Button {
+    background-color: #666;
+    color: var(--card-text);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.Dashboard-Shortcut-Team-Search {
+    padding: 10px;
+    margin: 10px 0;
+    width: 50%;
+    border-radius: 5px;
+    border: 1px solid var(--navbar-buttons-bg);
+    background: var(--form);
+    color: var(--form-text);
+}
+
+.Dashboard-Shortcut-Team-Search:focus {
+    outline: none;
+    border-color: var(--scrollbar-thumb);
+}
+
+.Dashboard-Shortcut-Buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.Dashboard-Shortcut-Live-Button{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.Dashboard-Shortcut-View-Button{
+    margin: 0 auto;
+    width: 90%;
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+}
+
+.courses-list-dashboard {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+    padding: 0;
+    margin: 0;
+}
+
+.course-item {
+    padding: 10px 15px; 
+    background-color: var(--Headings-Cards); 
+    border-radius: 6px; 
+    font-family: 'Inter', sans-serif; 
+    font-size: 15px; 
+    font-weight: 500; 
+    color: black; 
+    border-left: 4px solid #3498db; 
+    transition: all 0.2s ease;
+}
+
+
+@media screen and (max-width: 768px) {
+    .Dashboard-Shortcut-Card-Body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Dashboard-Shortcut-Card-Section {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .Dashboard-Shortcut-Fullscreen-Container,
+    .Dashboard-Shortcut-Team-Modal-Container,
+    .Dashboard-Shortcut-Details-Modal-Container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .Dashboard-Shortcut-Table,
+    .Dashboard-Shortcut-Team-Table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .Dashboard-Shortcut-Table thead,
+    .Dashboard-Shortcut-Team-Table thead {
+        display: none;
+    }
+
+    .Dashboard-Shortcut-Table tbody,
+    .Dashboard-Shortcut-Team-Table tbody {
+        display: block;
+    }
+
+    .Dashboard-Shortcut-Table tr,
+    .Dashboard-Shortcut-Team-Table tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .Dashboard-Shortcut-Table td,
+    .Dashboard-Shortcut-Team-Table td {
+        display: block;
+        text-align: right;
+        padding: 8px 10px;
+        border-bottom: none;
+        position: relative;
+    }
+
+    .Dashboard-Shortcut-Table td:before,
+    .Dashboard-Shortcut-Team-Table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        color: var(--Headings-Cards);
+    }
+
+    .Dashboard-Shortcut-Table td button,
+    .Dashboard-Shortcut-Team-Table td button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .Dashboard-Shortcut-Tag {
+        margin: 2px;
+    }
+}
+
+
+
