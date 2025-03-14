@@ -50,7 +50,7 @@ function AnimatedRoutes() {
           {!isAuthenticated && (
             <>
               <Route path="register" element={<motion.div {...pageVariants}><Register /></motion.div>} />
-              <Route path="login" element={<motion.div {...pageVariants}><GoogleReCaptchaProvider reCaptchaKey="6LfGD-8qAAAAAMbk4YwyOtfr5eFg-pRtDGeVsYXI"><Login /></GoogleReCaptchaProvider></motion.div>} />
+              <Route path="login" element={<motion.div {...pageVariants}><Login /></motion.div>} />
             </>
           )}
         </Route>
