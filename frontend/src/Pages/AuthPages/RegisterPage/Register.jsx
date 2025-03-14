@@ -5,6 +5,9 @@ import ImgRegister from '../../../assets/RegisterImage.png';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { z } from 'zod';
 
+const API_URL = import.meta.env.VITE_API_URL;
+
+
 const signupSchema = z
   .object({
     username: z.string().min(3, 'Username must be at least 3 characters long').max(35, 'Username must be at most 35 characters long'),
@@ -80,7 +83,7 @@ function Register() {
       return;
     }
 
-    const data = await fetch('http://localhost:3000/signup', {
+    const data = await fetch(`https://project-artemis-production.up.railway.app/signup`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

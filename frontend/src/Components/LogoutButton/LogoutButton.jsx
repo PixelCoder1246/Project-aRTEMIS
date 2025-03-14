@@ -3,6 +3,9 @@ import { AuthContext } from "../../hooks/authContext";
 import { motion } from "framer-motion";
 import "./LogoutButton.css"
 
+const API_URL = import.meta.env.VITE_API_URL;
+
+
 const LogoutButton = ({ givenClass }) => {
   const { checkAuthStatus } = useContext(AuthContext);
   const [isLoggingOut, setIsLoggingOut] = useState(false);
@@ -11,7 +14,7 @@ const LogoutButton = ({ givenClass }) => {
     try {
       setIsLoggingOut(true);
 
-      const response = await fetch("http://localhost:3000/auth/logout", {
+      const response = await fetch(`https://project-artemis-production.up.railway.app/auth/logout`, {
         method: "POST",
         credentials: "include",
       });

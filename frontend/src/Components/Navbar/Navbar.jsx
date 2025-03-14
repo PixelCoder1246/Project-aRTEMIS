@@ -26,7 +26,7 @@ function Navbar({ toggleTheme, isDarkTheme }) {
   };
 
   const openProfile = () => {
-    navigate("/userProfile");
+    navigate("/");
   };
 
   return (

@@ -6,6 +6,9 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { z } from 'zod';
 import { useAuth } from "../../../hooks/useAuth";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
+
 
 const loginSchema = z.object({
     email: z.string().email('Invalid email'),
@@ -64,7 +67,7 @@ function Login() {
             return;
         }
 
-        const data = await fetch('http://localhost:3000/login', {
+        const data = await fetch(`https://project-artemis-production.up.railway.app/login`, {
             method : 'POST',
             headers : {
                 "Content-type" : "application/json"

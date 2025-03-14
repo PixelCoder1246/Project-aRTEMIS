@@ -16,7 +16,7 @@ const uri = process.env.MONGO_CLIENT_ID;
 
 
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:5174'],
+    origin: ['http://localhost:5173', 'http://localhost:5174', "https://project-artemis-ten.vercel.app/"],
     credentials: true
 }));
 app.use(express.json());

@@ -13,6 +13,7 @@ import AboutPage from "./Pages/LandingPages/AboutPage/AboutPage";
 import Services from "./Pages/LandingPages/Services/Services";
 import ContactUs from "./Pages/LandingPages/ContactUs/ContactUs";
 
+
 function AnimatedRoutes() {
   const location = useLocation();
   const { isAuthenticated } = useAuth();
