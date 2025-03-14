@@ -10,16 +10,33 @@ const { setUserCollection } = require('./models/user');
 const cookieParser = require('cookie-parser');
 
 const app = express();
-app.use(cookieParser());
 const PORT = process.env.PORT || 3000;
 const uri = process.env.MONGO_CLIENT_ID;
 
 
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:5174', "https://project-artemis-ten.vercel.app/"],
+    origin: (origin, callback) => {
+        const allowedOrigins = ['http://localhost:5173', 'http://localhost:5174', "https://project-artemis-ten.vercel.app"];
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error("Not allowed by CORS"));
+        }
+    },
     credentials: true
 }));
+
 app.use(express.json());
+app.use(cookieParser());
+
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", req.headers.origin);
+    res.header("Access-Control-Allow-Credentials", "true");
+    res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE");
+    res.header("Access-Control-Allow-Headers", "Content-Type,Authorization");
+    next();
+});
+
 
 const client = new MongoClient(uri, {
     serverApi: { version: ServerApiVersion.v1 }
