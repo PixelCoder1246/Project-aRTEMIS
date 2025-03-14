@@ -1,0 +1,27 @@
+{
+  "name": "project-artemis",
+  "version": "1.0.0",
+  "description": "AI application for web",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && npm start"
+  },
+  "dependencies": {
+    "@google-cloud/recaptcha-enterprise": "^5.13.0",
+    "cookie-parser": "^1.4.7",
+    "crypto": "^1.0.1",
+    "express": "^4.21.2",
+    "nodemailer": "^6.10.0",
+    "react-google-recaptcha-v3": "^1.10.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "sass-embedded": "^1.85.1"
+  }
+  
+}

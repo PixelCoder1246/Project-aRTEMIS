@@ -1,0 +1,336 @@
+.Right-Sidebar-Component {
+    width: 500px;
+    height: 100vh;
+    background-color: var(--navbar-bg);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.Right-Sidebar-Contents {
+    overflow-y: auto;
+}
+
+.Right-Sidebar-Component.Right-Sidebar-Closed {
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.Right-Sidebar-Toggle-Button {
+    position: absolute;
+    padding: 0px 15px;
+    padding-bottom: 5px;
+    top: 5px;
+    left: -60px;
+    border-radius: 10px;
+    background-color: black;
+    opacity: 0.8;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 15;
+}
+
+.Right-Sidebar-Toggle-Button:hover {
+    transform: scale(1.1);
+}
+
+.Right-Sidebar-Notifications-Container {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: white;
+    height: 300px;
+    max-height: 100%;
+}
+
+.Right-Sidebar-Notifications-List {
+    display: flex;
+    flex-direction: column;
+}
+
+.Right-Sidebar-Notification-Item {
+    background-color: var(--background);
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    position: relative;
+}
+
+.Right-Sidebar-Notification-Content {
+    display: flex;
+    align-items: center;
+}
+
+.Right-Sidebar-Notification-Icon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.Right-Sidebar-Section-Heading-Recent {
+    margin-top: 15px;
+    text-align: center;
+    color: var(--Headings-Cards)!important;
+    margin-bottom: 5px;
+}
+
+.Right-Sidebar-Notification-Message {
+    flex: 1;
+    font-size: 1rem;
+}
+
+.Right-Sidebar-Notification-Actions {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.Right-Sidebar-Action-Button {
+    padding: 5px 20px;
+    background-color: var(--buttons-bg);
+    color: white;
+    border: none;
+    font-size: 14px;
+    width: 100%;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.Right-Sidebar-Action-Button:hover {
+    background-color: #3e4b6d;
+    transform: scale(1.01) translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.Right-Sidebar-Action-Button::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    z-index: -1;
+}
+
+.Right-Sidebar-Action-Button:hover::after {
+    width: 70%;
+}
+
+.Right-Sidebar-Action-Button:hover::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+}
+
+.Right-Sidebar-Close-Button {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    font-size: 18px;
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+}
+
+.Right-Sidebar-Notification-Time {
+    font-size: 10px;
+    color: #888;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.Right-Sidebar-Recent-Activities-Container {
+    padding: 8px;
+    border: 2px solid black;
+    height: 200px;
+    max-height: 100%;
+    background-color: white;
+    border-radius: 15px;
+    overflow-y: auto;
+}
+
+.Right-Sidebar-Recent-Activities-List {
+    display: flex;
+    flex-direction: column;
+}
+
+.Right-Sidebar-Recent-Activity-Item {
+    background-color: var(--background);
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Right-Sidebar-Recent-Activity-Icon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.Right-Sidebar-Recent-Activity-Message {
+    flex: 1;
+}
+
+.Right-Sidebar-Recent-Activity-Time {
+    font-size: 10px;
+    color: #888;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.Right-Sidebar-Section-Heading {
+    text-align: center;
+    color: var(--Headings-Cards)!important;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .Right-Sidebar-Component {
+        width: 350px;
+        height: 100vh;
+    }
+
+    .Right-Sidebar-Notification-Item {
+        padding: 8px;
+        margin-bottom: 8px;
+    }
+
+    .Right-Sidebar-Notification-Icon {
+        font-size: 18px;
+        margin-right: 8px;
+    }
+
+    .Right-Sidebar-Notification-Message {
+        font-size: 1rem;
+    }
+
+    .Right-Sidebar-Action-Button {
+        font-size: 12px;
+        padding: 4px 10px;
+    }
+
+    .Right-Sidebar-Close-Button {
+        font-size: 18px;
+    }
+
+    .Right-Sidebar-Notification-Time {
+        font-size: 10px;
+    }
+
+    .Right-Sidebar-Recent-Activity-Item {
+        padding: 8px;
+        margin-bottom: 8px;
+    }
+
+    .Right-Sidebar-Recent-Activity-Icon {
+        font-size: 18px;
+    }
+
+    .Right-Sidebar-Recent-Activity-Message {
+        font-size: 1rem;
+    }
+
+    .Right-Sidebar-Recent-Activity-Time {
+        font-size: 10px;
+    }
+
+    .Right-Sidebar-Section-Heading {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Right-Sidebar-Component {
+        width: 250px;
+        height: 100vh;
+    }
+    .Right-Sidebar-Notification-Item {
+        padding: 6px;
+        margin-bottom: 6px;
+    }
+
+    .Right-Sidebar-Notification-Icon {
+        font-size: 16px;
+        margin-right: 5px;
+    }
+
+    .Right-Sidebar-Notification-Message {
+        font-size: 0.9rem;
+    }
+
+    .Right-Sidebar-Action-Button {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+
+    .Right-Sidebar-Close-Button {
+        font-size: 16px;
+    }
+
+    .Right-Sidebar-Notification-Time {
+        font-size: 8px;
+    }
+
+    .Right-Sidebar-Recent-Activity-Item {
+        padding: 6px;
+        margin-bottom: 6px;
+    }
+
+    .Right-Sidebar-Recent-Activity-Icon {
+        font-size: 16px;
+    }
+
+    .Right-Sidebar-Recent-Activity-Message {
+        font-size: 0.9rem;
+    }
+
+    .Right-Sidebar-Recent-Activity-Time {
+        font-size: 8px;
+    }
+
+    .Right-Sidebar-Section-Heading {
+        font-size: 1.1rem;
+    }
+}
