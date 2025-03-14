@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { useAuth } from "./hooks/useAuth";
-import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 import "./App.css";
 import Layout from "./Pages/LandingPages/LayoutArea/Layout";
